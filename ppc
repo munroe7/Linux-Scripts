@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#Author: Sam Munroe
+#Date: 1/14/16
+#Website: www.sammunroe.com
+#Comments: This is a simple script I wrote to speed up the process of pushing changes to Git. This only works if you are commiting all files and not individual. Feel free to use this script and manipulate it as you wish!
+
+#always pull new changes before pushing your own changes.
+#nobody likes merge conflicts.
+git pull
+
+#ask the user for the commit message
+echo "Enter Commit Message:"
+#read in the commit message and assign it to the variable input_message
+read input_message
+
+#add all changed files
+git add -A
+
+#apply commit message
+git commit -m "$input_message"
+
+#push changes
+git push
+
+#let the user know the script is finished
+echo "Complete"
