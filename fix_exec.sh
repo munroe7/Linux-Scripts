@@ -65,5 +65,5 @@ else
                 echo "Not a regular file"
         fi
 fi
-                                                                                                                                                              66,2          Bot
+
 
